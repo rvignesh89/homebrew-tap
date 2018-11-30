@@ -28,12 +28,12 @@ class Havener < Formula
 
   desc 'Havener - Convenience tool to handle tasks around Containerized CF workloads on a Kubernetes cluster'
   homepage 'https://github.com/homeport/havener'
-  url "https://github.com/homeport/havener/releases/download/#{hver}/havener-kube-1.10-helm-2.10-linux-amd64"
+  url "https://github.com/homeport/havener/releases/download/#{hver}/havener-kube-1.10-helm-2.10-darwin-amd64"
   sha256 "#{hsha}"
   version "#{hver}"
 
   def install
-    FileUtils.mv('havener-kube-1.10-helm-2.10-linux-amd64', 'havener')
+    FileUtils.mv('havener-kube-1.10-helm-2.10-darwin-amd64', 'havener')
     bin.install 'havener'
   end
 
