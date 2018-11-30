@@ -23,17 +23,19 @@
 require 'FileUtils'
 
 class Havener < Formula
-  hver = "v0.4-alpha"
-  hsha = "54f3056df6e5acd9e66179abf459943996b6ece9f27e1130700d2fad10454cf4"
+  hver = "v0.6-alpha"
+  hsha = "9a715d30975f626665c1cb61a1b9c75fe4141417f7d6d8305f2a696a5dc199e0"
+  kube = "kube-1.10"
+  helm = "helm-2.10"
 
   desc 'Havener - Convenience tool to handle tasks around Containerized CF workloads on a Kubernetes cluster'
   homepage 'https://github.com/homeport/havener'
-  url "https://github.com/homeport/havener/releases/download/#{hver}/havener-darwin-amd64"
+  url "https://github.com/homeport/havener/releases/download/#{hver}/havener-#{kube}-#{helm}-linux-amd64"
   sha256 "#{hsha}"
   version "#{hver}"
 
   def install
-    FileUtils.mv('havener-darwin-amd64', 'havener')
+    FileUtils.mv("havener-#{kube}-#{helm}-linux-amd64", 'havener')
     bin.install 'havener'
   end
 
