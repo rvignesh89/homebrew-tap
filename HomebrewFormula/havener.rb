@@ -23,8 +23,8 @@
 require 'FileUtils'
 
 class Havener < Formula
-  hver = "v0.6-alpha"
-  hsha = "7fb334aadb6e8e8b0915abf2e15234133fcc1fb419dace1f96da939840b38514"
+  hver = "v0.11.0"
+  hsha = "b3a74f284a3e1dae67eb3a17184ddba7bafac1cac4cd6b2b1d3971b4828e87e0"
 
   desc 'Havener - Convenience tool to handle tasks around Containerized CF workloads on a Kubernetes cluster'
   homepage 'https://github.com/homeport/havener'
