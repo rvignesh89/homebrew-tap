@@ -23,8 +23,8 @@
 require 'FileUtils'
 
 class PinaGolada < Formula
-  yver = "v1.2.4"
-  ysha = "a4d2206a8b68ecbf561ffdab93859734e4f95bc4953012aa430a53529a4768a2"
+  yver = "v1.2.5"
+  ysha = "c0419c4d8c68780fb877bfd2fcf75c4fdef035e308bc9023f6de62faa98697f7"
 
   desc 'pina-golada - a simple asset tool for go, which generates interface implementations that provide files/folders in the final build, without rendering them in the source code themselve'
   homepage 'https://github.com/homeport/pina-golada'
