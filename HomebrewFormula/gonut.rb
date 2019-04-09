@@ -24,8 +24,8 @@ require 'FileUtils'
 
 # Just the gonut homebrew formula
 class Gonut < Formula
-  yver = "v0.9.0-alpha"
-  ysha = "ec2c45462fd9712902d196ecb9f7a10b403f75b51ee9596ed2cc82cbebc07f34"
+  yver = "v0.10.0-alpha"
+  ysha = "aa5a9ab45f42439c52f37be4d6bf049bed9104c593cd33be67409b83206d936d"
 
   desc 'gonut - a portable tool to help you verify whether you can push a sample app to a Cloud Foundry'
   homepage 'https://github.com/homeport/gonut'
