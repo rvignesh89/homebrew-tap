@@ -24,8 +24,8 @@ require 'FileUtils'
 
 # Just the ytbx homebrew formula
 class Ytbx < Formula
-  yver = "v1.0.0"
-  ysha = "d8df4d93859b9903ee493a8be40540b273b5f6437ac8686ec4bc03122b9d4362"
+  yver = "v1.1.1"
+  ysha = "2566d7e909ca07d371f9b272301eca315c122f90a77e4db3ea627530f7ba90e9"
 
   desc 'ytbx - YAML tool box'
   homepage 'https://github.com/homeport/ytbx'

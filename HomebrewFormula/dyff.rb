@@ -2,8 +2,8 @@ require 'FileUtils'
 
 # Just the dyff homebrew formula
 class Dyff < Formula
-  dver = "v0.8.0"
-  dsha = "894992dec49b172844236ef74a17061858569fd301d08fecc3bff416539c4fde"
+  dver = "v0.10.0"
+  dsha = "0d41fd8f7857dd12eb02722aafbbfe9d594cf6bb156b6e0edcece21e210dfc15"
 
   desc 'δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON'
   homepage 'https://github.com/homeport/dyff'
