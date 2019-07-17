@@ -1,9 +1,9 @@
 class Ytbx < Formula
   desc "ytbx - YAML tool box"
   homepage "https://github.com/homeport/ytbx"
-  url "https://github.com/homeport/ytbx/releases/download/v1.1.1/ytbx-darwin-amd64"
-  version "v1.1.1"
-  sha256 "2566d7e909ca07d371f9b272301eca315c122f90a77e4db3ea627530f7ba90e9"
+  url "https://github.com/homeport/ytbx/releases/download/v1.1.2/ytbx-darwin-amd64"
+  version "v1.1.2"
+  sha256 "272e6ec05c9490db222c61f94396e4612935275605b2289e6c37cc04ccdf97e7"
 
   def install
     mv('ytbx-darwin-amd64', 'ytbx')
