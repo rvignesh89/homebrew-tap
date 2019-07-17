@@ -1,5 +1,3 @@
-require 'FileUtils'
-
 # Just the dyff homebrew formula
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
@@ -9,7 +7,7 @@ class Dyff < Formula
   version "v0.10.2"
 
   def install
-    FileUtils.mv('dyff-darwin-amd64', 'dyff')
+    mv('dyff-darwin-amd64', 'dyff')
     bin.install 'dyff'
   end
 
