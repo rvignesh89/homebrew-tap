@@ -24,17 +24,14 @@ require 'FileUtils'
 
 # Just the ytbx homebrew formula
 class Ytbx < Formula
-  yver = "v1.1.1"
-  ysha = "2566d7e909ca07d371f9b272301eca315c122f90a77e4db3ea627530f7ba90e9"
-
-  desc 'ytbx - YAML tool box'
-  homepage 'https://github.com/homeport/ytbx'
-  url "https://github.com/homeport/ytbx/releases/download/#{yver}/ytbx-darwin-amd64"
-  sha256 "#{ysha}"
-  version "#{yver}"
+  desc "ytbx - YAML tool box"
+  homepage "https://github.com/homeport/ytbx"
+  url "https://github.com/homeport/ytbx/releases/download/v1.1.1/ytbx-darwin-amd64"
+  version "v1.1.1"
+  sha256 "2566d7e909ca07d371f9b272301eca315c122f90a77e4db3ea627530f7ba90e9"
 
   def install
-    FileUtils.mv('ytbx-darwin-amd64', 'ytbx')
+    mv('ytbx-darwin-amd64', 'ytbx')
     bin.install 'ytbx'
   end
 
