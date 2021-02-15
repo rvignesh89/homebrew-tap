@@ -6,15 +6,15 @@ class Termshot < Formula
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    url "https://github.com/homeport/termshot/releases/download/v0.2.0/termshot_0.2.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
     sha256 "fa826ba141083f5ee901a58933dbc200b3eb088401e351dd31d86e248f761a8e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    url "https://github.com/homeport/termshot/releases/download/v0.2.0/termshot_0.2.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
     sha256 "739b8e8309a830a3b13a78eb4177273358dd2279122e4c241aec822b5b99ec4f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    url "https://github.com/homeport/termshot/releases/download/v0.2.0/termshot_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
     sha256 "985379ee89d82186f831ce9e7801907647244084dafe4cb45e0300c46d4b3c2b"
   end
 
