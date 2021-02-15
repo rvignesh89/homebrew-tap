@@ -10,15 +10,15 @@ class Dyff < Formula
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy.
+    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
     sha256 "580691a378e00a989d44902938a591308c616986987b1886f2c15632f7841e85"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy.
+    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
     sha256 "b5e2459c9196daacc2d951cc1fa4b6fd62cbee22ae3a6fd2541f1648dce6d705"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy.
+    url "https://github.com/homeport/dyff/releases/download/v1.2.1/dyff_1.2.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
     sha256 "1f77562e09caa76ced60b96ade20d3631ad6112cd8f986e34ebf55b0c32b16cd"
   end
 
