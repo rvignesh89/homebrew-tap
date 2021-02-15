@@ -2,20 +2,20 @@
 class Termshot < Formula
   desc "Creates screenshots based on terminal command output"
   homepage "https://github.com/homeport/termshot"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.1.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "1862d31fa660d8cdbcc32fd050b9397a0668a84aad9950ea50ef83adb2869b5e"
+    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "fa826ba141083f5ee901a58933dbc200b3eb088401e351dd31d86e248f761a8e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.1.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "596135879c93e9a4ae290a029ae7db47ffd39cd9a79704fcaa1b034eaa033efb"
+    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "739b8e8309a830a3b13a78eb4177273358dd2279122e4c241aec822b5b99ec4f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.1.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "88fcc83ecb3a7fe15e27e1f00d823cef04fac6d900e8b16835e1c37f650e83f0"
+    url "https://github.com/homeport/termshot/releases/download/v0.1.0/termshot_0.2.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "985379ee89d82186f831ce9e7801907647244084dafe4cb45e0300c46d4b3c2b"
   end
 
   def install
@@ -23,7 +23,7 @@ class Termshot < Formula
   end
 
   def caveats; <<~EOS
-    How to use this binary
+    Like time, watch, or perf, just place termshot before the command and you are set.
   EOS
   end
 
