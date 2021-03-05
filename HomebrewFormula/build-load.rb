@@ -5,17 +5,17 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.5.0/build-load_0.5.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "3e94bcae665f20c97a393fec101135dbc7ce95f259d386e727858b3b11039492"
+    url "https://github.com/homeport/build-load/releases/download/v0.6.0/build-load_0.6.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "9e67786ec46a634127ed88194951d0c2ddc49c876ef563f622e9f077134c3fcb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.5.0/build-load_0.5.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "9a3fb1a37099bfa55cea8a799f5f21797504ede3c21f073444677e364152ea7a"
+    url "https://github.com/homeport/build-load/releases/download/v0.6.0/build-load_0.6.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "1a09bbc10304ba55cb4d8fb38854cca075e49cc6721b28b50628156f96795e17"
   end
 
   def install
