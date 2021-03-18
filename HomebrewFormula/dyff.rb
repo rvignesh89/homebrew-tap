@@ -5,17 +5,17 @@
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
   homepage "https://github.com/homeport/dyff"
-  version "1.2.3"
+  version "1.2.4"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/dyff/releases/download/v1.2.3/dyff_1.2.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "c825158b8ee57801014edce625dfe795532f7541681177e1299e936e7b565f2f"
+    url "https://github.com/homeport/dyff/releases/download/v1.2.4/dyff_1.2.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "8b25afc8881b7def45239b239d4e5fcce271d150c7bfd60fdf2c59bd52456737"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/dyff/releases/download/v1.2.3/dyff_1.2.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "bfec1355d50084edaba991ace565e6f065db427b9bd14adc91142ba54467cb90"
+    url "https://github.com/homeport/dyff/releases/download/v1.2.4/dyff_1.2.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "34635a6b71d6b2112fc477639f5fe238d991f384088d55445bfc00888462497c"
   end
 
   def install
