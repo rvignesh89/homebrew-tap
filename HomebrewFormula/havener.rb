@@ -5,17 +5,17 @@
 class Havener < Formula
   desc "/ˈheɪvənə/ - Think of it as a swiss army knife for Kubernetes tasks "
   homepage "https://github.com/homeport/havener"
-  version "2.0.0"
+  version "2.0.1"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/havener/releases/download/v2.0.0/havener_2.0.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "cf85e843d7696eabb7625193b7638e8b730a4da17a9fdea43e5660cfd852781d"
+    url "https://github.com/homeport/havener/releases/download/v2.0.1/havener_2.0.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "424328a7bbb5b9239902ed9dd3384dc58ac155ab289d5caf7c581a1e6a50ddac"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/havener/releases/download/v2.0.0/havener_2.0.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "b5e5e246d19b462720003f3598a4ca85192b95f77f2edd41782d675776c3e162"
+    url "https://github.com/homeport/havener/releases/download/v2.0.1/havener_2.0.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "e039ff888b444ef98e10d48426aaa9cb696167ada238b022db989ec62f14027d"
   end
 
   def install
