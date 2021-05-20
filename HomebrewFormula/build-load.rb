@@ -5,21 +5,21 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  version "0.6.5"
+  version "0.6.6"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.6.5/build-load_0.6.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "aa3f80b73dfffb58c21e1aaa18dff81bae419a23914500b5470b7a2f464aafc3"
+    url "https://github.com/homeport/build-load/releases/download/v0.6.6/build-load_0.6.6_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "2313301c5bb91f065801c4d71f415dac5f08cbbcfe6ba02ff866e1d8ddbaa169"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.6.5/build-load_0.6.5_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "e3812475ea50a21db72e243c831659c94b9a81ce56df931b82db029e3004832a"
+    url "https://github.com/homeport/build-load/releases/download/v0.6.6/build-load_0.6.6_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "a99e0d8f7d8c2e6bec6a248a59597e1731d210c5f8147ed55a5a5eb5a984d706"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/homeport/build-load/releases/download/v0.6.5/build-load_0.6.5_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "cead399b39b0612bd7f158a681b36d7e491e59d1187eebae5fa3db307e7521d0"
+    url "https://github.com/homeport/build-load/releases/download/v0.6.6/build-load_0.6.6_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "af8f32dbd0e20d3ea9de911166d13902d0fa893881540106d25cab1ddc86ed46"
   end
 
   def install
