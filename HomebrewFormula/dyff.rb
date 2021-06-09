@@ -5,25 +5,29 @@
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
   homepage "https://github.com/homeport/dyff"
-  version "1.4.1"
+  version "1.4.2"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.1/dyff_1.4.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "21d80ba01352845e474c5d892f2e19015f288ac5b7f654f37dad6ab53e148be0"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "f88a4a4062be51589af4107bc70fc13ff635ca0428fe7cfa2023bf52b8290054"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4ce7675e48ae6dbcf13b1e1f5f2c984101fc4bd83ba0127a82a7c79d08dc5934"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.1/dyff_1.4.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "9fcc9b100bcfa03a888aff52bab41cd7aec647f61afecda5a60fc55560ab3714"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "7759f67ffd4ca8833fa70ac87480d452259cfe7ebb6ba29c95e18a0988b66415"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.1/dyff_1.4.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2311ef80ae770afc0424f6df7b48cdc3896c1e6eea69586086f0050d8ec16b2a"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "df1c6da3b4e58282380581a7e05f093763db535f656f272032dc568bc80e6d5c"
     end
   end
 
