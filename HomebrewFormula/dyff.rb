@@ -5,29 +5,29 @@
 class Dyff < Formula
   desc "δyƒƒ /ˈdʏf/ - A diff tool for YAML files, and sometimes JSON"
   homepage "https://github.com/homeport/dyff"
-  version "1.4.2"
+  version "1.4.3"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f88a4a4062be51589af4107bc70fc13ff635ca0428fe7cfa2023bf52b8290054"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.3/dyff_1.4.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "64e980d5ea8b3231f4d99d4831c0d5f152083523c97123f04dc9f2bf11c4ffd9"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "4ce7675e48ae6dbcf13b1e1f5f2c984101fc4bd83ba0127a82a7c79d08dc5934"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.3/dyff_1.4.3_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "3a82b34fdf7a68ffbbaccd03e81457c325f9644c0dad0a34587b7504d0feefb5"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "7759f67ffd4ca8833fa70ac87480d452259cfe7ebb6ba29c95e18a0988b66415"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.3/dyff_1.4.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "35d12bdfcb709f5d82e5f458a958ec87c77674e406279659e7e2ded4486cdfe6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/dyff/releases/download/v1.4.2/dyff_1.4.2_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "df1c6da3b4e58282380581a7e05f093763db535f656f272032dc568bc80e6d5c"
+      url "https://github.com/homeport/dyff/releases/download/v1.4.3/dyff_1.4.3_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "62c240fc69bbdd82eaf594d95e80afadb95f6a226d30298d56ad39076b2370e4"
     end
   end
 
