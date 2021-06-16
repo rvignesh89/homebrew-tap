@@ -5,17 +5,30 @@
 class Havener < Formula
   desc "/ˈheɪvənə/ - Think of it as a swiss army knife for Kubernetes tasks "
   homepage "https://github.com/homeport/havener"
-  version "2.0.2"
+  version "2.0.3"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/havener/releases/download/v2.0.2/havener_2.0.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "802cd3592a38a1a1ee5d2d46ac58d77437b917fb3b3b73481a796e8eb8eab0fc"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/havener/releases/download/v2.0.3/havener_2.0.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "90eb70fa4fd702ce170f530e391d3a89db10f75a8e58bd9a5d81ebb8abb0875e"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/havener/releases/download/v2.0.3/havener_2.0.3_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "9c6a28f7bd738df3cae5eefb82e9a248e7835294d6a9a635dc0d5b22d7dcbd5f"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/havener/releases/download/v2.0.2/havener_2.0.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "83173d1ce676fc1cfaa813c1a2c2caafa3bb9c085aaa73f214fd65b2de6c5bf7"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/havener/releases/download/v2.0.3/havener_2.0.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "79f81dfec78bc8d1fb10de3819f2673f30b381689b3fb8e08c41e954d862d43a"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/havener/releases/download/v2.0.3/havener_2.0.3_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "8c03c06a2494d0dbaed43bc2ac33e286cd3d38f4f924b0dc436e695465c3d3f6"
+    end
   end
 
   def install
