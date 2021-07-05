@@ -5,29 +5,29 @@
 class Havener < Formula
   desc "/ˈheɪvənə/ - Think of it as a swiss army knife for Kubernetes tasks "
   homepage "https://github.com/homeport/havener"
-  version "2.0.4"
+  version "2.0.5"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/havener/releases/download/v2.0.4/havener_2.0.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a12cc01bf445fb792b508813aead69339377cb92e3d0782579b90cc78dc44ae2"
+      url "https://github.com/homeport/havener/releases/download/v2.0.5/havener_2.0.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "7c5184f3ddb04e9888de255ecb34a94fb9419dd19aa46532cdc249b846080531"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/homeport/havener/releases/download/v2.0.4/havener_2.0.4_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "9d681a13eead3c6f4d6c420146a085ecf0ccd7c1d8677e1e9e95b3874506bf3e"
+      url "https://github.com/homeport/havener/releases/download/v2.0.5/havener_2.0.5_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0bb4c03e0fa48a1ba19984effa35e0a899b0929ee123444d02b312290ab001cb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/havener/releases/download/v2.0.4/havener_2.0.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "0aa14e77a33df5fb28209935b44d4cf070ac23e010cb42a49fbde1fc8b576efb"
+      url "https://github.com/homeport/havener/releases/download/v2.0.5/havener_2.0.5_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "041e492d39c0d3399b37d94dd343696a93884be3acf3a70727b87f3aa8c6a65d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/homeport/havener/releases/download/v2.0.4/havener_2.0.4_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c1fb72080e95526e3b431e7b76d83f4e944e18bf56cc4c53cf1f266d13c1dbc3"
+      url "https://github.com/homeport/havener/releases/download/v2.0.5/havener_2.0.5_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "878a422d0e9203b1326c4cff9d5f2e2c6d20448bdaa44ff75ff90d9e5b32ba7d"
     end
   end
 
