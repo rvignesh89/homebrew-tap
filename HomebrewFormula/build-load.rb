@@ -5,21 +5,30 @@
 class BuildLoad < Formula
   desc "build-load - command line tool to create synthetic load for https://github.com/shipwright-io/build"
   homepage "https://github.com/homeport/build-load"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.7.0/build-load_0.7.0_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "eaaa305afdf0bb522cdecad388b6ad2c1172a1d67af27cf2e680d5182e900e04"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.1/build-load_0.7.1_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "c7006fa9cd5db8bf6c1b8123c364051d4e21f947a775ed1d8ff053c2195f1cdf"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.1/build-load_0.7.1_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "3ca402ba9b6668944dce843f96b04b5a7b1b68a2f2824130914a5ad897a2cd0e"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/build-load/releases/download/v0.7.0/build-load_0.7.0_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "390a6578ef747fba60d1a67c420ccf319bd2de51c65d470771467de1ba2d5679"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/homeport/build-load/releases/download/v0.7.0/build-load_0.7.0_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "af05a6f49fad9f28e659d0f25004d1e2c1b69e616631daebe9b75068ffefc089"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.1/build-load_0.7.1_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0da7309968a83a5b1512060b34f368f87eb991c95bd51630818862631da0c41e"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/homeport/build-load/releases/download/v0.7.1/build-load_0.7.1_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "22a356ce3753f94bd91bb336fbc274a6d25c31c73140cece276da60e9bec0bad"
+    end
   end
 
   def install
