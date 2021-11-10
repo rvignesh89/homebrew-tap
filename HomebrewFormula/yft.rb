@@ -5,21 +5,29 @@
 class Yft < Formula
   desc "yft - YAML file tool"
   homepage "https://github.com/homeport/yft"
-  version "1.0.4"
+  version "1.0.5"
   license "MIT"
-  bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/homeport/yft/releases/download/v1.0.4/yft_1.0.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "a056877c0fb421d9bc6f870964e735b6fbfbb1a17c76f1efe48c7d9faaba65b6"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/homeport/yft/releases/download/v1.0.4/yft_1.0.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "c254bb5e55bd9ab6efce0908e2ca0f8e7dde87570a24324baf40380080fcb835"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/yft/releases/download/v1.0.5/yft_1.0.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "2371f3181054de3af90227c181e8deedcd7ca458d6116e4e069aafcfacc98a94"
+
+      def install
+        bin.install "yft"
+      end
+    end
   end
 
-  def install
-    bin.install "yft"
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/homeport/yft/releases/download/v1.0.5/yft_1.0.5_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "9b9adf060a34f1cbe49d7f2f36fee6226464e637ddb96ce187d6408a495ef59d"
+
+      def install
+        bin.install "yft"
+      end
+    end
   end
 
   test do
