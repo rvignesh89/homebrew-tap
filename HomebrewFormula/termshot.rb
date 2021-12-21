@@ -5,13 +5,13 @@
 class Termshot < Formula
   desc "Creates screenshots based on terminal command output."
   homepage "https://github.com/homeport/termshot"
-  version "0.2.2"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.2/termshot_0.2.2_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "1cfde4000f14c67860e11e64e673293ce9c31a821910784493c3b3fa02a5b00e"
+      url "https://github.com/homeport/termshot/releases/download/v0.2.3/termshot_0.2.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "5209ad161ccf457936f8c48f8efd89f5e5860b06dfd2a11b553e27b65b668131"
 
       def install
         bin.install "termshot"
@@ -21,8 +21,8 @@ class Termshot < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/termshot/releases/download/v0.2.2/termshot_0.2.2_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "b62fe4aaf6104c91a4062810892c999cd1d774e7f28443fda46c616a13e3eb9e"
+      url "https://github.com/homeport/termshot/releases/download/v0.2.3/termshot_0.2.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "51b00f52076aaa713a052d8715b85861ab733d49c7cee8e9a383801032b930f8"
 
       def install
         bin.install "termshot"
