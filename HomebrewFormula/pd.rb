@@ -5,13 +5,13 @@
 class Pd < Formula
   desc "pd - command line tool to query PagerDuty for the current on-calls"
   homepage "https://github.com/homeport/pd"
-  version "2.5.3"
+  version "2.5.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/pd/releases/download/v2.5.3/pd_2.5.3_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a11986c2c928824103a4a6950e26b2c82e07a0fa6703aa62fb1ca78dbf61b9f3"
+      url "https://github.com/homeport/pd/releases/download/v2.5.4/pd_2.5.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "fdbd94bfebf2b55c48ae4aa09f5b50cb51578008bb972914f73b2985b63b7264"
 
       def install
         bin.install "pd"
@@ -21,8 +21,8 @@ class Pd < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/homeport/pd/releases/download/v2.5.3/pd_2.5.3_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "5b18c4bb7783805433c70a1546bc3227e6ea202c2b0e5ba637f599b101713c24"
+      url "https://github.com/homeport/pd/releases/download/v2.5.4/pd_2.5.4_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "b1755944e766a36e8907916124bfbb70101a1ebcbb0ffb99308ad24047d46429"
 
       def install
         bin.install "pd"
