@@ -9,13 +9,11 @@ class Yft < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/yft/releases/download/v1.0.5/yft_1.0.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2371f3181054de3af90227c181e8deedcd7ca458d6116e4e069aafcfacc98a94"
+    url "https://github.com/homeport/yft/releases/download/v1.0.5/yft_1.0.5_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "2371f3181054de3af90227c181e8deedcd7ca458d6116e4e069aafcfacc98a94"
 
-      def install
-        bin.install "yft"
-      end
+    def install
+      bin.install "yft"
     end
   end
 

@@ -9,13 +9,11 @@ class Pd < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/pd/releases/download/v2.5.4/pd_2.5.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "fdbd94bfebf2b55c48ae4aa09f5b50cb51578008bb972914f73b2985b63b7264"
+    url "https://github.com/homeport/pd/releases/download/v2.5.4/pd_2.5.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "fdbd94bfebf2b55c48ae4aa09f5b50cb51578008bb972914f73b2985b63b7264"
 
-      def install
-        bin.install "pd"
-      end
+    def install
+      bin.install "pd"
     end
   end
 
