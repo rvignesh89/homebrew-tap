@@ -9,13 +9,11 @@ class Gonut < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/homeport/gonut/releases/download/v2.0.4/gonut_2.0.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c456e5c7cf76946df4c0b7c1ead4c8fe31bc2207c702d7e83f763034c962a8aa"
+    url "https://github.com/homeport/gonut/releases/download/v2.0.4/gonut_2.0.4_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "c456e5c7cf76946df4c0b7c1ead4c8fe31bc2207c702d7e83f763034c962a8aa"
 
-      def install
-        bin.install "gonut"
-      end
+    def install
+      bin.install "gonut"
     end
   end
 
